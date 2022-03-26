@@ -18,9 +18,12 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
+        "nunomaduro/larastan": "^2.1",
+        "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0",
-        "symplify/easy-coding-standard": "^10.1"
+        "symplify/easy-coding-standard": "^10.1",
+        "symplify/phpstan-extensions": "^10.1"
     },
     "autoload": {
         "psr-4": {
@@ -53,6 +56,7 @@
         "fix-cs": "ecs check --fix --ansi",
         "lint": "parallel-lint --exclude .git --exclude node_modules --exclude storage --exclude vendor .",
         "phpstan": "phpstan analyse --error-format symplify --ansi",
+        "phpstan-baseline": "phpstan analyse --generate-baseline",
         "tests": "phpunit --testdox",
         "ide": "@php artisan ide-helper:models -W",
         "all": [

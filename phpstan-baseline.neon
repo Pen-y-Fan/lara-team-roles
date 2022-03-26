@@ -1,0 +1,652 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Actions\\\\Fortify\\\\CreateNewUser\\:\\:create\\(\\) should return App\\\\Models\\\\User but returns mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/CreateNewUser.php
+
+		-
+			message: "#^Cannot call method forceFill\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/ResetUserPassword.php
+
+		-
+			message: "#^Cannot access property \\$password on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserPassword.php
+
+		-
+			message: "#^Cannot call method forceFill\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserPassword.php
+
+		-
+			message: "#^Cannot access property \\$email on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Cannot access property \\$id on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Cannot call method forceFill\\(\\) on mixed\\.$#"
+			count: 2
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Cannot call method sendEmailVerificationNotification\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Cannot call method updateProfilePhoto\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Fortify/UpdateUserProfileInformation.php
+
+		-
+			message: "#^Cannot call method hasUserWithEmail\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/AddTeamMember.php
+
+		-
+			message: "#^Cannot call method users\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/AddTeamMember.php
+
+		-
+			message: "#^Cannot call method ownedTeams\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/CreateTeam.php
+
+		-
+			message: "#^Cannot call method switchTeam\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/CreateTeam.php
+
+		-
+			message: "#^Cannot call method purge\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteTeam.php
+
+		-
+			message: "#^Cannot access property \\$ownedTeams on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Cannot access property \\$tokens on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Cannot call method delete\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Cannot call method deleteProfilePhoto\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Cannot call method teams\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/DeleteUser.php
+
+		-
+			message: "#^Cannot access property \\$id on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/InviteTeamMember.php
+
+		-
+			message: "#^Cannot call method hasUserWithEmail\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/InviteTeamMember.php
+
+		-
+			message: "#^Cannot call method teamInvitations\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/InviteTeamMember.php
+
+		-
+			message: "#^Cannot access property \\$id on mixed\\.$#"
+			count: 3
+			path: app/Actions/Jetstream/RemoveTeamMember.php
+
+		-
+			message: "#^Cannot access property \\$owner on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/RemoveTeamMember.php
+
+		-
+			message: "#^Cannot call method removeUser\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/RemoveTeamMember.php
+
+		-
+			message: "#^Cannot call method forceFill\\(\\) on mixed\\.$#"
+			count: 1
+			path: app/Actions/Jetstream/UpdateTeamName.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Models\\\\Team\\:\\:\\$casts is not covariant with PHPDoc type array\\<string, string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$casts\\.$#"
+			count: 1
+			path: app/Models/Team.php
+
+		-
+			message: "#^Method App\\\\Models\\\\TeamInvitation\\:\\:team\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: app/Models/TeamInvitation.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Providers\\\\AuthServiceProvider\\:\\:\\$policies is not covariant with PHPDoc type array\\<class\\-string, class\\-string\\> of overridden property Illuminate\\\\Foundation\\\\Support\\\\Providers\\\\AuthServiceProvider\\:\\:\\$policies\\.$#"
+			count: 1
+			path: app/Providers/AuthServiceProvider.php
+
+		-
+			message: "#^Cannot cast mixed to string\\.$#"
+			count: 1
+			path: app/Providers/FortifyServiceProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of method Illuminate\\\\Cache\\\\RateLimiting\\\\Limit\\:\\:by\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: app/Providers/FortifyServiceProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of method Illuminate\\\\Cache\\\\RateLimiting\\\\Limit\\:\\:by\\(\\) expects string, int\\<min, \\-1\\>\\|int\\<1, max\\>\\|string\\|null given\\.$#"
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: "#^Class Database\\\\Factories\\\\TeamFactory extends generic class Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory but does not specify its types\\: TModel$#"
+			count: 1
+			path: database/factories/TeamFactory.php
+
+		-
+			message: "#^PHPDoc type string of property Database\\\\Factories\\\\TeamFactory\\:\\:\\$model is not covariant with PHPDoc type class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:\\$model\\.$#"
+			count: 1
+			path: database/factories/TeamFactory.php
+
+		-
+			message: "#^Class Database\\\\Factories\\\\UserFactory extends generic class Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory but does not specify its types\\: TModel$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Method Database\\\\Factories\\\\UserFactory\\:\\:unverified\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory does not specify its types\\: TModel$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Method Database\\\\Factories\\\\UserFactory\\:\\:withPersonalTeam\\(\\) should return \\$this\\(Database\\\\Factories\\\\UserFactory\\) but returns static\\(Database\\\\Factories\\\\UserFactory\\)\\.$#"
+			count: 2
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^PHPDoc type string of property Database\\\\Factories\\\\UserFactory\\:\\:\\$model is not covariant with PHPDoc type class\\-string\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:\\$model\\.$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Parameter \\#1 \\$state of method Illuminate\\\\Database\\\\Eloquent\\\\Factories\\\\Factory\\<Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\:\\:state\\(\\) expects array\\<string, mixed\\>\\|\\(callable\\(array\\<string, mixed\\>\\)\\: array\\<string, mixed\\>\\), Closure\\(array, App\\\\Models\\\\User\\)\\: array\\{name\\: non\\-empty\\-string, user_id\\: int, personal_team\\: true\\} given\\.$#"
+			count: 1
+			path: database/factories/UserFactory.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:tokens\\(\\)\\.$#"
+			count: 1
+			path: tests/Feature/ApiTokenPermissionsTest.php
+
+		-
+			message: "#^Cannot access property \\$tokens on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 3
+			path: tests/Feature/ApiTokenPermissionsTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\ApiTokenPermissionsTest\\:\\:testApiTokenPermissionsCanBeUpdated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/ApiTokenPermissionsTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/ApiTokenPermissionsTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$email\\.$#"
+			count: 2
+			path: tests/Feature/AuthenticationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\AuthenticationTest\\:\\:testLoginScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/AuthenticationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\AuthenticationTest\\:\\:testUsersCanAuthenticateUsingTheLoginScreen\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/AuthenticationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\AuthenticationTest\\:\\:testUsersCanNotAuthenticateWithInvalidPassword\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/AuthenticationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\BrowserSessionsTest\\:\\:testOtherBrowserSessionsCanBeLoggedOut\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/BrowserSessionsTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/BrowserSessionsTest.php
+
+		-
+			message: "#^Cannot access property \\$tokens on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 4
+			path: tests/Feature/CreateApiTokenTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\CreateApiTokenTest\\:\\:testApiTokensCanBeCreated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/CreateApiTokenTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/CreateApiTokenTest.php
+
+		-
+			message: "#^Cannot access property \\$ownedTeams on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/CreateTeamTest.php
+
+		-
+			message: "#^Cannot call method ownedTeams\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/CreateTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\CreateTeamTest\\:\\:testTeamsCanBeCreated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/CreateTeamTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/CreateTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\DeleteAccountTest\\:\\:testCorrectPasswordMustBeProvidedBeforeAccountCanBeDeleted\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/DeleteAccountTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\DeleteAccountTest\\:\\:testUserAccountsCanBeDeleted\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/DeleteAccountTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/DeleteAccountTest.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:tokens\\(\\)\\.$#"
+			count: 1
+			path: tests/Feature/DeleteApiTokenTest.php
+
+		-
+			message: "#^Cannot access property \\$tokens on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/DeleteApiTokenTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\DeleteApiTokenTest\\:\\:testApiTokensCanBeDeleted\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/DeleteApiTokenTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/DeleteApiTokenTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 2
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:ownedTeams\\(\\)\\.$#"
+			count: 1
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:users\\(\\)\\.$#"
+			count: 1
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Cannot access property \\$teams on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\DeleteTeamTest\\:\\:testPersonalTeamsCantBeDeleted\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\DeleteTeamTest\\:\\:testTeamsCanBeDeleted\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/DeleteTeamTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$email\\.$#"
+			count: 1
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 2
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Cannot call method hasVerifiedEmail\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 2
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\EmailVerificationTest\\:\\:testEmailCanBeVerified\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\EmailVerificationTest\\:\\:testEmailCanNotVerifiedWithInvalidHash\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\EmailVerificationTest\\:\\:testEmailVerificationScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 3
+			path: tests/Feature/EmailVerificationTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 5
+			path: tests/Feature/InviteTeamMemberTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\InviteTeamMemberTest\\:\\:testTeamMemberInvitationsCanBeCancelled\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/InviteTeamMemberTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\InviteTeamMemberTest\\:\\:testTeamMembersCanBeInvitedToTeam\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/InviteTeamMemberTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/InviteTeamMemberTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 5
+			path: tests/Feature/LeaveTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\LeaveTeamTest\\:\\:testTeamOwnersCantLeaveTheirOwnTeam\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/LeaveTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\LeaveTeamTest\\:\\:testUsersCanLeaveTeams\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/LeaveTeamTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/LeaveTeamTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordConfirmationTest\\:\\:testConfirmPasswordScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordConfirmationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordConfirmationTest\\:\\:testPasswordCanBeConfirmed\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordConfirmationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordConfirmationTest\\:\\:testPasswordIsNotConfirmedWithInvalidPassword\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordConfirmationTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 3
+			path: tests/Feature/PasswordConfirmationTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$email\\.$#"
+			count: 4
+			path: tests/Feature/PasswordResetTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordResetTest\\:\\:testPasswordCanBeResetWithValidToken\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordResetTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordResetTest\\:\\:testResetPasswordLinkCanBeRequested\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordResetTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordResetTest\\:\\:testResetPasswordLinkScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordResetTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\PasswordResetTest\\:\\:testResetPasswordScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/PasswordResetTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$email\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$name\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Cannot access property \\$email on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Cannot access property \\$name on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\ProfileInformationTest\\:\\:testCurrentProfileInformationIsAvailable\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\ProfileInformationTest\\:\\:testProfileInformationCanBeUpdated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/ProfileInformationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\RegistrationTest\\:\\:testNewUsersCanRegister\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/RegistrationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\RegistrationTest\\:\\:testRegistrationScreenCanBeRendered\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/RegistrationTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\RegistrationTest\\:\\:testRegistrationScreenCannotBeRenderedIfSupportIsDisabled\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/RegistrationTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 5
+			path: tests/Feature/RemoveTeamMemberTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 2
+			path: tests/Feature/RemoveTeamMemberTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\RemoveTeamMemberTest\\:\\:testOnlyTeamOwnerCanRemoveTeamMembers\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/RemoveTeamMemberTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\RemoveTeamMemberTest\\:\\:testTeamMembersCanBeRemovedFromTeams\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/RemoveTeamMemberTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/RemoveTeamMemberTest.php
+
+		-
+			message: "#^Cannot access property \\$two_factor_secret on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 3
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Cannot call method fresh\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Cannot call method recoveryCodes\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 4
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\TwoFactorAuthenticationSettingsTest\\:\\:testRecoveryCodesCanBeRegenerated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\TwoFactorAuthenticationSettingsTest\\:\\:testTwoFactorAuthenticationCanBeDisabled\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\TwoFactorAuthenticationSettingsTest\\:\\:testTwoFactorAuthenticationCanBeEnabled\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 3
+			path: tests/Feature/TwoFactorAuthenticationSettingsTest.php
+
+		-
+			message: "#^Cannot access property \\$password on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 3
+			path: tests/Feature/UpdatePasswordTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdatePasswordTest\\:\\:testCurrentPasswordMustBeCorrect\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdatePasswordTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdatePasswordTest\\:\\:testNewPasswordsMustMatch\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdatePasswordTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdatePasswordTest\\:\\:testPasswordCanBeUpdated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdatePasswordTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 3
+			path: tests/Feature/UpdatePasswordTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 6
+			path: tests/Feature/UpdateTeamMemberRoleTest.php
+
+		-
+			message: "#^Cannot call method hasTeamRole\\(\\) on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 2
+			path: tests/Feature/UpdateTeamMemberRoleTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdateTeamMemberRoleTest\\:\\:testOnlyTeamOwnerCanUpdateTeamMemberRoles\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdateTeamMemberRoleTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdateTeamMemberRoleTest\\:\\:testTeamMemberRolesCanBeUpdated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdateTeamMemberRoleTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 2
+			path: tests/Feature/UpdateTeamMemberRoleTest.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$currentTeam\\.$#"
+			count: 2
+			path: tests/Feature/UpdateTeamNameTest.php
+
+		-
+			message: "#^Cannot access property \\$ownedTeams on Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model\\|null\\.$#"
+			count: 1
+			path: tests/Feature/UpdateTeamNameTest.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\UpdateTeamNameTest\\:\\:testTeamNamesCanBeUpdated\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/UpdateTeamNameTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$user of method Illuminate\\\\Foundation\\\\Testing\\\\TestCase\\:\\:actingAs\\(\\) expects Illuminate\\\\Contracts\\\\Auth\\\\Authenticatable, Illuminate\\\\Database\\\\Eloquent\\\\Collection\\<int, Illuminate\\\\Database\\\\Eloquent\\\\Model\\>\\|Illuminate\\\\Database\\\\Eloquent\\\\Model given\\.$#"
+			count: 1
+			path: tests/Feature/UpdateTeamNameTest.php
+
