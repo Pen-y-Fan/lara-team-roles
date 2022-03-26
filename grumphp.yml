@@ -12,9 +12,9 @@ grumphp:
       clear-cache: false
       no-progress-bar: true
     phpstan:
-      configuration: .\phpstan.neon
+      configuration: 'phpstan.neon'
       triggered_by: [ 'php' ]
-      ignore_patterns: [ ]
+      ignore_patterns: [ '_ide_helper.php', '.phpstorm.meta.php' ]
       memory_limit: "-1"
     phpunit:
       always_execute: false
