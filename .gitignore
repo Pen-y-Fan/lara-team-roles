@@ -12,3 +12,11 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/cc.bat
+/fc.bat
+/pu.bat
+/ps.bat
+/li.bat
+/gr.bat
+/ide.bat
+/all.bat
