@@ -4,7 +4,7 @@ Test project to investigate [jetstream with Livewire Teams](https://jetstream.la
 with the [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction). By default in teams one
 user has one role, I want to investigate multiple roles per user for the team they belong to.
 
-Install and check filament admin is working.
+Install and check [filament admin](https://filamentphp.com/docs/2.x/tables/installation) is working too.
 
 ## Local installation
 
