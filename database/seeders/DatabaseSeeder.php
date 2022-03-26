@@ -7,13 +7,19 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    use WithoutModelEvents;
+
     /**
      * Seed the application's database.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        if (env('APP_ENV') === 'local') {
+        // password by default is password
+         \App\Models\User::factory()->withPersonalTeam()->create([
+             'name' => 'Admin user',
+             'email' => 'admin@example.com',
+         ]);
+        }
     }
 }

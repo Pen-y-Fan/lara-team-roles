@@ -8,8 +8,10 @@
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
+        "laravel/jetstream": "^2.6",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "livewire/livewire": "^2.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -44,6 +46,19 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "grumphp": "grumphp run",
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --fix --ansi",
+        "lint": "parallel-lint --exclude .git --exclude node_modules --exclude storage --exclude vendor .",
+        "phpstan": "phpstan analyse --error-format symplify --ansi",
+        "tests": "phpunit --testdox",
+        "ide": "@php artisan ide-helper:models -W",
+        "all": [
+            "@phpstan",
+            "@lint",
+            "@tests",
+            "@check-cs"
         ]
     },
     "extra": {
