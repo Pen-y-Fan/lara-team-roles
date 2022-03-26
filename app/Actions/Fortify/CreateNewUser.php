@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -19,22 +20,21 @@ class CreateNewUser implements CreatesNewUsers
     /**
      * Create a newly registered user.
      *
-     * @param  array  $input
      * @return \App\Models\User
      */
     public function create(array $input)
     {
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'max:255'],
+            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
+            'terms'    => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
         return DB::transaction(function () use ($input) {
             return tap(User::create([
-                'name' => $input['name'],
-                'email' => $input['email'],
+                'name'     => $input['name'],
+                'email'    => $input['email'],
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
                 $this->createTeam($user);
@@ -45,14 +45,13 @@ class CreateNewUser implements CreatesNewUsers
     /**
      * Create a personal team for the user.
      *
-     * @param  \App\Models\User  $user
      * @return void
      */
     protected function createTeam(User $user)
     {
         $user->ownedTeams()->save(Team::forceCreate([
-            'user_id' => $user->id,
-            'name' => explode(' ', $user->name, 2)[0]."'s Team",
+            'user_id'       => $user->id,
+            'name'          => explode(' ', $user->name, 2)[0] . "'s Team",
             'personal_team' => true,
         ]));
     }

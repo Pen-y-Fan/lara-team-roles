@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -41,7 +42,7 @@ class FortifyServiceProvider extends ServiceProvider
         RateLimiter::for('login', function (Request $request) {
             $email = (string) $request->email;
 
-            return Limit::perMinute(5)->by($email.$request->ip());
+            return Limit::perMinute(5)->by($email . $request->ip());
         });
 
         RateLimiter::for('two-factor', function (Request $request) {

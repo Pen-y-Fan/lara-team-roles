@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -25,8 +26,8 @@ class TeamFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->unique()->company(),
-            'user_id' => User::factory(),
+            'name'          => $this->faker->unique()->company(),
+            'user_id'       => User::factory(),
             'personal_team' => true,
         ];
     }

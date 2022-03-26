@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -41,9 +42,8 @@ class RemoveTeamMember implements RemovesTeamMembers
      */
     protected function authorize($user, $team, $teamMember)
     {
-        if (! Gate::forUser($user)->check('removeTeamMember', $team) &&
-            $user->id !== $teamMember->id) {
-            throw new AuthorizationException;
+        if (! Gate::forUser($user)->check('removeTeamMember', $team) && $user->id !== $teamMember->id) {
+            throw new AuthorizationException();
         }
     }
 

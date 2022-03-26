@@ -1,11 +1,11 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
 use Laravel\Sanctum\Sanctum;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Stateful Domains
@@ -63,7 +63,6 @@ return [
 
     'middleware' => [
         'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
-        'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
+        'encrypt_cookies'   => App\Http\Middleware\EncryptCookies::class,
     ],
-
 ];

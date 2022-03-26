@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -14,12 +15,12 @@ class BrowserSessionsTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_other_browser_sessions_can_be_logged_out()
+    public function testOtherBrowserSessionsCanBeLoggedOut()
     {
         $this->actingAs($user = User::factory()->create());
 
         Livewire::test(LogoutOtherBrowserSessionsForm::class)
-                ->set('password', 'password')
-                ->call('logoutOtherBrowserSessions');
+            ->set('password', 'password')
+            ->call('logoutOtherBrowserSessions');
     }
 }

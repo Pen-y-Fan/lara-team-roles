@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -20,7 +21,6 @@ class DeleteUser implements DeletesUsers
     /**
      * Create a new action instance.
      *
-     * @param  \Laravel\Jetstream\Contracts\DeletesTeams  $deletesTeams
      * @return void
      */
     public function __construct(DeletesTeams $deletesTeams)

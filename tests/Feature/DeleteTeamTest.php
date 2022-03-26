@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -15,7 +16,7 @@ class DeleteTeamTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_teams_can_be_deleted()
+    public function testTeamsCanBeDeleted()
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
@@ -24,23 +25,30 @@ class DeleteTeamTest extends TestCase
         ]));
 
         $team->users()->attach(
-            $otherUser = User::factory()->create(), ['role' => 'test-role']
+            $otherUser = User::factory()->create(),
+            [
+                'role' => 'test-role',
+            ]
         );
 
-        $component = Livewire::test(DeleteTeamForm::class, ['team' => $team->fresh()])
-                                ->call('deleteTeam');
+        $component = Livewire::test(DeleteTeamForm::class, [
+            'team' => $team->fresh(),
+        ])
+            ->call('deleteTeam');
 
         $this->assertNull($team->fresh());
         $this->assertCount(0, $otherUser->fresh()->teams);
     }
 
-    public function test_personal_teams_cant_be_deleted()
+    public function testPersonalTeamsCantBeDeleted()
     {
         $this->actingAs($user = User::factory()->withPersonalTeam()->create());
 
-        $component = Livewire::test(DeleteTeamForm::class, ['team' => $user->currentTeam])
-                                ->call('deleteTeam')
-                                ->assertHasErrors(['team']);
+        $component = Livewire::test(DeleteTeamForm::class, [
+            'team' => $user->currentTeam,
+        ])
+            ->call('deleteTeam')
+            ->assertHasErrors(['team']);
 
         $this->assertNotNull($user->currentTeam->fresh());
     }

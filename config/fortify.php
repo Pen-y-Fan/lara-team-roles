@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -6,7 +7,6 @@ use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Fortify Guard
@@ -105,7 +105,7 @@ return [
     */
 
     'limiters' => [
-        'login' => 'login',
+        'login'      => 'login',
         'two-factor' => 'two-factor',
     ],
 
@@ -144,5 +144,4 @@ return [
             'confirmPassword' => true,
         ]),
     ],
-
 ];

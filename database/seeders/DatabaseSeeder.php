@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
@@ -17,11 +18,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         if (env('APP_ENV') === 'local') {
-        // password by default is password
-         \App\Models\User::factory()->withPersonalTeam()->create([
-             'name' => 'Admin user',
-             'email' => 'admin@example.com',
-         ]);
+            // password by default is password
+            \App\Models\User::factory()->withPersonalTeam()->create([
+                'name'  => 'Admin user',
+                'email' => 'admin@example.com',
+            ]);
         }
     }
 }

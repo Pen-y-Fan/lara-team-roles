@@ -1,11 +1,11 @@
 <?php
+
 declare(strict_types=1);
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Facade;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -197,5 +197,4 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // ...
     ])->toArray(),
-
 ];
